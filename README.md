@@ -1,3 +1,5 @@
+Make a grid and intersect points with the sf package
+================
 Francesco Bailo (<francesco.bailo@sydney.edu.au>)
 
 ## Package for spatial analysis
@@ -218,16 +220,16 @@ point_intersection.list
     ## Sparse geometry binary predicate list of length 2000, where the
     ## predicate was `intersects'
     ## first 10 elements:
-    ##  1: (empty)
-    ##  2: 300
+    ##  1: 118
+    ##  2: 59
     ##  3: (empty)
-    ##  4: (empty)
-    ##  5: 322
-    ##  6: 81
-    ##  7: 39
-    ##  8: (empty)
-    ##  9: 280
-    ##  10: (empty)
+    ##  4: 76
+    ##  5: 192
+    ##  6: (empty)
+    ##  7: (empty)
+    ##  8: 282
+    ##  9: 97
+    ##  10: 415
 
 Let’s make sure we don’t lose any point in the conversion from list to
 vector in case they are out of the intersecting area (here the area of
@@ -247,16 +249,16 @@ point_intersection.list
     ## Sparse geometry binary predicate list of length 2000, where the
     ## predicate was `intersects'
     ## first 10 elements:
-    ##  1: NA
-    ##  2: 300
+    ##  1: 118
+    ##  2: 59
     ##  3: NA
-    ##  4: NA
-    ##  5: 322
-    ##  6: 81
-    ##  7: 39
-    ##  8: NA
-    ##  9: 280
-    ##  10: NA
+    ##  4: 76
+    ##  5: 192
+    ##  6: NA
+    ##  7: NA
+    ##  8: 282
+    ##  9: 97
+    ##  10: 415
 
 Then we can add the resulting `italy_hex_cropped.sf$hex_id` to
 `random_pnt.sf`.
@@ -273,15 +275,15 @@ head(random_pnt.sf)
     ## Simple feature collection with 6 features and 2 fields
     ## Geometry type: POINT
     ## Dimension:     XY
-    ## Bounding box:  xmin: 328665.1 ymin: 4959875 xmax: 508969.5 ymax: 5180322
+    ## Bounding box:  xmin: 303389.3 ymin: 4930125 xmax: 451187.8 ymax: 5163356
     ## Projected CRS: WGS 84 / UTM zone 32N
     ##   pnt_id            random_pnt.sf hex_id
-    ## 1      1 POINT (446493.6 5180322)     NA
-    ## 2      2 POINT (495631.4 4987881)   1341
-    ## 3      3 POINT (328665.1 4959875)     NA
-    ## 4      4   POINT (465743 5170824)     NA
-    ## 5      5 POINT (508969.5 5107513)   1396
-    ## 6      6 POINT (398072.9 5062274)    644
+    ## 1      1 POINT (429070.5 4931973)    839
+    ## 2      2   POINT (373757 5013787)    542
+    ## 3      3 POINT (303389.3 4980196)     NA
+    ## 4      4 POINT (388447.9 4930125)    639
+    ## 5      5 POINT (451187.8 4989163)   1041
+    ## 6      6 POINT (418223.4 5163356)     NA
 
 ``` r
 random_pnt.sf %>%

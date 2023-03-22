@@ -1,4 +1,5 @@
 ---
+title: "Make a grid and intersect points with the sf package"
 author: "Francesco Bailo (francesco.bailo@sydney.edu.au)"
 output: github_document
 ---
