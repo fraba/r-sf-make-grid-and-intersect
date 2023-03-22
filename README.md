@@ -1,5 +1,4 @@
-Untitled
-================
+Francesco Bailo (<francesco.bailo@sydney.edu.au>)
 
 ## Package for spatial analysis
 
@@ -220,15 +219,15 @@ point_intersection.list
     ## predicate was `intersects'
     ## first 10 elements:
     ##  1: (empty)
-    ##  2: 48
-    ##  3: 158
+    ##  2: 300
+    ##  3: (empty)
     ##  4: (empty)
-    ##  5: (empty)
-    ##  6: (empty)
-    ##  7: (empty)
+    ##  5: 322
+    ##  6: 81
+    ##  7: 39
     ##  8: (empty)
-    ##  9: (empty)
-    ##  10: 73
+    ##  9: 280
+    ##  10: (empty)
 
 Let’s make sure we don’t lose any point in the conversion from list to
 vector in case they are out of the intersecting area (here the area of
@@ -249,15 +248,15 @@ point_intersection.list
     ## predicate was `intersects'
     ## first 10 elements:
     ##  1: NA
-    ##  2: 48
-    ##  3: 158
+    ##  2: 300
+    ##  3: NA
     ##  4: NA
-    ##  5: NA
-    ##  6: NA
-    ##  7: NA
+    ##  5: 322
+    ##  6: 81
+    ##  7: 39
     ##  8: NA
-    ##  9: NA
-    ##  10: 73
+    ##  9: 280
+    ##  10: NA
 
 Then we can add the resulting `italy_hex_cropped.sf$hex_id` to
 `random_pnt.sf`.
@@ -274,15 +273,15 @@ head(random_pnt.sf)
     ## Simple feature collection with 6 features and 2 fields
     ## Geometry type: POINT
     ## Dimension:     XY
-    ## Bounding box:  xmin: 338306.1 ymin: 4850088 xmax: 443625.3 ymax: 5127646
+    ## Bounding box:  xmin: 328665.1 ymin: 4959875 xmax: 508969.5 ymax: 5180322
     ## Projected CRS: WGS 84 / UTM zone 32N
     ##   pnt_id            random_pnt.sf hex_id
-    ## 1      1 POINT (397946.4 5127646)     NA
-    ## 2      2 POINT (377141.8 4969485)    491
-    ## 3      3 POINT (438511.8 5119199)    946
-    ## 4      4 POINT (438578.7 4868172)     NA
-    ## 5      5 POINT (443625.3 4850088)     NA
-    ## 6      6 POINT (338306.1 4868158)     NA
+    ## 1      1 POINT (446493.6 5180322)     NA
+    ## 2      2 POINT (495631.4 4987881)   1341
+    ## 3      3 POINT (328665.1 4959875)     NA
+    ## 4      4   POINT (465743 5170824)     NA
+    ## 5      5 POINT (508969.5 5107513)   1396
+    ## 6      6 POINT (398072.9 5062274)    644
 
 ``` r
 random_pnt.sf %>%
